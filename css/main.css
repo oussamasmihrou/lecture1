@@ -43,9 +43,9 @@ body{
         width: 220px;
     }
 }
-@media (max-width:400px){
+@media (max-width:500px){
     .content{
-        width: 40%;
+        width: 45%;
         margin: 3%;
 
     }
