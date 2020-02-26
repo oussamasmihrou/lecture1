@@ -17,8 +17,8 @@ body{
 }
 .content{
     
-    height: 210px;
-    width: 210px;
+    height: 200px;
+    width: 200px;
     background-color: rgba(135,124,176,1);
     margin: 15px;
     border-radius: 5px;
@@ -36,18 +36,34 @@ body{
     width: 400px ;
   
 }
+@media (max-width:450px) and (min-width:350px){ /*compris entr 350 et 450*/
+    .content{
+        width: 40%;
+        margin: 4%;
+        
+        height: 160px;
+        
 
+    }
+}
 @media (max-width:1150px){   /*  apply this style only when sized less tha 1000px*/
+    
     .content:hover{
         height: 220px;
         width: 220px;
     }
 }
-@media (max-width:400px){
+@media (max-width:350px){
     .content{
-        width: 40%;
-        margin: 3%;
-
+        width: 45%;
+        margin: 5px;
+        height: 100px;
+    }
+    .content:hover{
+        opacity: 1;
+        color: white;
+        height: 100px;
+        width: 44% ;
     }
 }
 .cats{
