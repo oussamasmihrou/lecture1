@@ -3,22 +3,18 @@
     <head>
         <title>Lecture 1</title>
         <link href='css/main.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
         <!---  jumping to an Id            -->
-        <a href='#id1'> jump to the id 1 </a>
-        <div id= 'id1' style= 'position: absolute;top:5000px'  > you jumped here</div>
+        <a   id ='id1'  href='#id2'> jump to the id 1 </a>
+        <a   id= 'id2'  href='#id1' style= 'position: absolute;top:5000px' > jump back</a>
         <div id='container'>
-            <div id='content1' class="content"> 
-                <img class = 'cats'          src="cat1 .jpg" alt="">
-            </div>
-            <div class="content">               
-                <img class= 'cats'         src="cat2.jpeg"  alt="">
-            </div>
-            <div class="content">               
-                <img class = 'cats'   src="cat3.jpg"  alt=""> 
-            </div>
+            <div class="content">         <img class = 'cats'    src="img/cat1 .jpg" alt=""></div> 
+            <div class="content">         <img class=  'cats'    src="img/cat2.jpeg" alt=""></div>
+            <div class="content">         <img class = 'cats'    src="img/cat3.jpg"  alt=""></div>
+            <div class="content">         <img class = 'cats'    src="img/meme.jpg"  alt=""></div>
         </div>
     </body>
 </html>
