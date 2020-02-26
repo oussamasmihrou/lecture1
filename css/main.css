@@ -53,7 +53,6 @@ body{
         width: 220px;
     }
 }
-<<<<<<< HEAD
 @media (max-width:350px){
     .content{
         width: 45%;
@@ -65,13 +64,6 @@ body{
         color: white;
         height: 100px;
         width: 44% ;
-=======
-@media (max-width:500px){
-    .content{
-        width: 45%;
-        margin: 3%;
-
->>>>>>> 64eef9ecec9ca4211330449f4eaf72fffa974ef1
     }
 }
 .cats{
