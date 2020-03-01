@@ -65,11 +65,51 @@ body{
     50%{color:white;letter-spacing:  30px;  background-color: rgb(71, 28, 121);left: 33%;   width: 30%;}
     100%{color:white;letter-spacing: 8px;   background-color: rgb(146, 62, 97);left: 89%;   width: 10%;}
 }
+
+
+
+.grid_container{
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 10px;
+    background-color: rgb(71, 28, 121);
+    padding: 10px;
+}
+.grid_item{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 20px
+}
+#first-layout.row{
+    background-color: wheat;
+    min-height: 100px;
+    height: auto;
+    padding: 10px;
+    
+}
+#first-layout.row * {                       /*  Select all the childs of first-column.row*/
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: .5; 
+    transition: all 200ms ease-out 100ms;
+
+}
+#first-layout.row *:hover{                       /*  Select all the childs of first-column.row*/
+    opacity: 1;
+    border-bottom: black 1px solid;
+
+}
+
+/*                                Responsivity                    */
+
 @media (max-width:650px) and (min-width:350px){ /*compris entr 350 et 450*/
     .content{
         width: 40%;
         margin: 4%;
-        
         height: 160px;
     }
      .cube{
@@ -81,6 +121,7 @@ body{
         100%{color:white;  background-color: rgb(146, 62, 97);left: 89%;   width: 10%;}
     }
 }
+
 @media (max-width:1150px){   /*  apply this style only when sized less tha 1000px*/
     
     .content:hover{
@@ -88,7 +129,7 @@ body{
         width: 220px;
     }
 }
-@media (max-width:350px){  /*Apply the style only to screen < 350px */
+@media (max-width:50px){  /*Apply the style only to screen < 350px */
     .content{
         width: 45%;
         margin: 5px;
@@ -101,23 +142,3 @@ body{
         width: 44% ;
     }
 }
-
-.grid_container{
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: 300px 200px auto;
-    grid-row-gap: 10px;
-    background-color: rgb(71, 28, 121);
-    padding: 10px;
-    
-}
-.grid_item{
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    text-align: center;
-    overflow: hidden;
-    font-size: 20px;
-}
-
-
