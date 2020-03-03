@@ -1,0 +1,190 @@
+$primary_color: rgb(42, 8, 73); /*Variables in Sass*/
+$secondary_color: rgb(129, 62, 146);
+body {
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  background-repeat: no-repeat;
+  position: relative;
+}
+%style_extended {
+  color: white;
+  opacity: 0.5;
+  padding: 10px;
+  height: 30px;
+  width: 100%;
+}
+#red_alert {
+  @extend %style_extended;
+  background-color: red;
+}
+#green_alert {
+  @extend %style_extended;
+  background-color: green;
+}
+#container {
+  height: auto;
+  background-color: $primary_color;
+  padding: 0px;
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  background-color: $secondary_color;
+  margin: 15px;
+  border-radius: 5px;
+  opacity: 0.4;
+  transition: all 0.7s ease-out 0.1s;
+}
+.content:hover {
+  opacity: 1;
+  color: white;
+  height: 400px;
+  width: 400px;
+}
+.cats {
+  width: 100%;
+  height: 100%;
+}
+.cube {
+  overflow: hidden;
+  opacity: 0.7;
+  font-family: "Lacquer", sans-serif;
+  position: absolute;
+  height: auto;
+  width: 10%;
+  padding: 5px 0;
+  background-color: white;
+  border-radius: 10px;
+  top: 40%;
+  font-size: 10px;
+  letter-spacing: 9px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  animation-name: animate_cube;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3000ms;
+}
+@keyframes animate_cube {
+  0% {
+    color: black;
+    letter-spacing: 8px;
+    background-color: white;
+    left: 0px;
+    width: 10%;
+  }
+  50% {
+    color: white;
+    letter-spacing: 30px;
+    background-color: $primary_color;
+    left: 33%;
+    width: 30%;
+  }
+  100% {
+    color: white;
+    letter-spacing: 8px;
+    background-color: rgb(146, 62, 97);
+    left: 89%;
+    width: 10%;
+  }
+}
+
+.grid_container {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 10px;
+  background-color: $primary_color;
+  padding: 10px;
+}
+.grid_item {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 20px;
+}
+#first-layout.row {
+  background-color: $secondary_color;
+  min-height: 100px;
+  height: auto;
+  padding: 10px;
+}
+#first-layout.row * {
+  /*  Select all the childs of first-column.row*/
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  opacity: 0.5;
+  transition: all 300ms ease-out 150ms;
+}
+#first-layout.row *:hover {
+  /*  Select all the childs of first-column.row*/
+  opacity: 1;
+  border-bottom: black 1px solid;
+}
+
+/*                                Responsivity                    */
+
+@media (max-width: 650px) and (min-width: 350px) {
+  /*compris entr 350 et 450*/
+  .content {
+    width: 40%;
+    margin: 4%;
+    height: 160px;
+  }
+  .cube {
+    font-size: 8px;
+  }
+  @keyframes animate_cube {
+    0% {
+      color: black;
+      background-color: white;
+      left: 0px;
+      width: 10%;
+    }
+    50% {
+      color: white;
+      background-color: $primary_color;
+      left: 33%;
+      width: 30%;
+    }
+    100% {
+      color: white;
+      background-color: rgb(146, 62, 97);
+      left: 89%;
+      width: 10%;
+    }
+  }
+}
+@media (max-width: 1150px) {
+  /*  apply this style only when sized less tha 1000px*/
+
+  .content:hover {
+    height: 220px;
+    width: 220px;
+  }
+}
+@media (max-width: 50px) {
+  /*Apply the style only to screen < 350px */
+  .content {
+    width: 45%;
+    margin: 5px;
+    height: 100px;
+  }
+  .content:hover {
+    opacity: 1;
+    color: white;
+    height: 100px;
+    width: 44%;
+  }
+}
